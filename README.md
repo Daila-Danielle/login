@@ -1,6 +1,6 @@
 <h1>Sistema de login e cadastro de usuario usando a linguagem PHP</h1>
 <h2>→ Resumo</h2>
-Projeto de um sistema de login e cadastro de usuarios, ele permite cadastrar um usuario armazenando essas informações no banco de dados e realizar o login buscando essas informações previamente cadastradas, um diferencial é que as senhas são gravadas criptografadas criando um nível de proteção maior.
+Projeto de um sistema de login e cadastro de usuarios, ele permite cadastrar um usuario armazenando essas informações no banco de dados e realizar o login buscando essas informações previamente cadastradas, um diferencial é que as senhas são gravadas criptografadas criando um nível de proteção maior e foi utilizado a 'sessão' quando o usuario digita pela url a pagina 'home' ele é redirecionado para a pagina de login caso ele ainda não esteja logado, aumentando a segurança do seu site.
 
 <h2>→ Tecnologias</h2>
 → PHP
