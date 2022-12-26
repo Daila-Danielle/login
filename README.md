@@ -1,5 +1,5 @@
 <h1>Sistema de login e cadastro de usuario usando a linguagem PHP</h1>
-→ Resumo
+<h2>→ Resumo</h2>
 Projeto de uma cópia do Instagram. Ele conta com a maioria das funções do Instagram real. Desde criação de conta, até realizar publicações. O instafake é constituído de sistema conectado a um banco de dados, onde ficam salvos os dados de cadastro de usuários da rede social, e todas suas postagens. Outro diferencial é que as senhas são gravadas criptografadas criando um nível de proteção maior.
 
 → Tecnologias
