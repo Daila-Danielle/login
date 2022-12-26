@@ -1,4 +1,25 @@
-Sistema de login e cadastro de usuario usando a linguagem PHP
+<h1>Sistema de login e cadastro de usuario usando a linguagem PHP</h1>
+→ Resumo
+Projeto de uma cópia do Instagram. Ele conta com a maioria das funções do Instagram real. Desde criação de conta, até realizar publicações. O instafake é constituído de sistema conectado a um banco de dados, onde ficam salvos os dados de cadastro de usuários da rede social, e todas suas postagens. Outro diferencial é que as senhas são gravadas criptografadas criando um nível de proteção maior.
+
+→ Tecnologias
+→ Python
+→ Flask
+→ Flask Session
+→ Mysql
+→ HTML5, CSS3
+→ bcrypt
+→ smtplib
+
+→ Descrição detalhada
+► Banco de dados
+O Instafake possui um banco de dados desenvolvido no MySQL Workbench.
+O db_instafake possui as tabelas usuario_dadospessoais e publicacoes que possuem uma relação (1,n)
+
+→ Modelo Físico:
+
+
+► Cadastrar Usuários
 
 <h1>Tela de cadastro de usuario</h1>
 
