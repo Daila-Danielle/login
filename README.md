@@ -16,4 +16,4 @@ Sistema de login e cadastro de usuario usando a linguagem PHP
 <p> Caso os dados estejam corretos é redirecionado para a pagina 'home'</p>
 <img src = "https://user-images.githubusercontent.com/111146154/209554940-a50628ae-a8eb-44c5-88c3-7f65fbe97c93.png">
 <p> Tem a opção de 'sair' onde será deslogado da sessão e voltará para pagina de login</p>
-![image](https://user-images.githubusercontent.com/111146154/209555393-8a6f780c-d333-46a5-b86b-ad0749a6e640.png)
+<img src = "https://user-images.githubusercontent.com/111146154/209555393-8a6f780c-d333-46a5-b86b-ad0749a6e640.png">
