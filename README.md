@@ -5,7 +5,7 @@ Projeto de um sistema de login e cadastro de usuarios, ele permite cadastrar um 
 <h2>→ Tecnologias</h2>
 → PHP
 <br>
-→ Mysql
+→ SQL
 <br>
 → HTML5, CSS3
 <br>
@@ -18,9 +18,10 @@ Projeto de um sistema de login e cadastro de usuarios, ele permite cadastrar um 
 <h3>► Banco de dados</h3>
 Possui um banco de dados desenvolvido no MySQL.
 O db_usuario possui a tabela tb_usuario
-
-<h3>→ Modelo Físico:</h3>
+<br>
 <img src = "https://user-images.githubusercontent.com/111146154/209556234-b5d27e57-6f7a-4d31-a9e6-5ed6fd62ab8f.png">
+<h3>→ Modelo Físico:</h3>
+<img src = "https://user-images.githubusercontent.com/111146154/209803936-b2678949-bb95-4de0-8232-fe1db92db45a.png">
 
 
 <h3>► Cadastrar Usuários</h3>
@@ -44,3 +45,10 @@ O db_usuario possui a tabela tb_usuario
 <img src = "https://user-images.githubusercontent.com/111146154/209554940-a50628ae-a8eb-44c5-88c3-7f65fbe97c93.png">
 <p> Tem a opção de 'sair' onde será deslogado da sessão e voltará para pagina de login</p>
 <img src = "https://user-images.githubusercontent.com/111146154/209555393-8a6f780c-d333-46a5-b86b-ad0749a6e640.png">
+
+
+<h3>→ Video</h3>
+
+<video src="https://user-images.githubusercontent.com/111146154/209803738-aeeb8af9-dbe3-4c54-a4c3-c75f8ca3e22c.mp4"></video>
+
+
