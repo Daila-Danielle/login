@@ -25,10 +25,7 @@
                     <input type="password" class="form-control" id="senha" name="senha"> 
                 </div>
             </div>
-                <div class="col-xs-12 col-sm-5">
-                    <label class="label">Foto de perfil</label>
-                    <input type="file" class="form-control"> 
-                </div>
+
         </div>
 
         <center><div class="style-form-input full">
