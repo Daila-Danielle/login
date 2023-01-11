@@ -25,6 +25,12 @@
                     <input type="password" class="form-control" id="senha" name="senha"> 
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <label class="label">Foto de perfil</label>
+                    <input type="file" class="form-control" id="foto_perfil" name="foto_perfil"> 
+                </div>
+            </div>
 
         </div>
 
