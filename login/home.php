@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['senha']) == true))
 {
@@ -6,9 +7,13 @@ if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['senha']) == tru
   }
 
 $logado = $_SESSION['email'];
+
+$foto = consulta_foto($logado)
+
 ?>
 
 <div>
 <h1>PARABENS <?php echo $logado ?> EFETUOU O LOGIN</h1>
-<img src="https://cdn.dicionariopopular.com/imagens/imagem-de-perfil-gato.jpg">
+
+<img src="<?php echo $foto['foto_perfil'] ?>">
 </div>

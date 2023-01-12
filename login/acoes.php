@@ -8,7 +8,6 @@
             $email     = $_POST["email"];
             $senha     = password_hash($_POST["senha"], PASSWORD_DEFAULT);
 
-
             #verifica se tem email já cadastrados se tiver exibe mensagem de erro
             #se não faz o INSERT no banco de dados.
             if(consulta_email()==True){
@@ -16,18 +15,45 @@
                 print "<script>location.href='?pagina=cadastro-usuario';</script>";
             }
             else{
-                $sql = "INSERT INTO tb_usuario (nome, email, senha, celular)
-                VALUES ('{$nome}', '{$email}', '{$senha}', '{$celular}')";
-                $res  = $conexao->query($sql);
-                if ($res==true){
-                    print "<script>alert('Cadastrado com Sucesso!');</script>";
-                    print "<script>location.href='?pagina=login';</script>";
+                #pega a foto de perfil do usuario
+                if(isset($_FILES['foto_perfil'])) {
+                    $foto_perfil = $_FILES['foto_perfil'];
+                    if($foto_perfil['size'] > 2097152) { #se o arquivo da foto for maior de 2mb exibe uma mensagem de arquivo muito grande
+                        print "<script>alert('Arquivo muito grande! maximo 2MB');</script>";   
+                    }
+                    $pasta = "img-perfil-usuario/"; #pasta onde as imagens serão salvas
+                    $nomeDoArquivo = $foto_perfil['name']; #pega o nome do arquivo enviado pelo usuario
+                    $novoNomeDoArquivo = uniqid(); #uniqid é uma função que da um nome aleatorio pro arquivo
+                    $extensao = strtolower(pathinfo($nomeDoArquivo,PATHINFO_EXTENSION)); # pega a extensão do arquivo e coloca tudo em minusculo
+
+                    if ($extensao != "jpg" && $extensao != "png" ) { # Se o arquivo for diferente de jpg e png ele exibe uma mensagem de erro 
+                        die('Tipo de arquivo não aceito');
+                    }
+
+                    $path = $pasta . $novoNomeDoArquivo . "." . $extensao; # onde o arquivo será salvo e o nome como se fosse o href dele
+
+                    $deu_certo = move_uploaded_file($foto_perfil["tmp_name"], $path); # retorna true se deu certo e false se não
                 }
                 else{
-                    print "<script>alert('Não foi possivel realizar o cadastro!');</script>";
-                    print "<script>location.href='?pagina=cadastro-usuario';</script>";
+                    $path = "img-perfil-usuario/foto_padrao.png";
                 }
+                if($deu_certo){
+
+                    $sql = "INSERT INTO tb_usuario (nome, email, senha, celular, foto_perfil) VALUES ('{$nome}', '{$email}', '{$senha}', '{$celular}','{$path}')";
+                    $res  = $conexao->query($sql);
+                    if ($res==true){
+                        print "<script>alert('Cadastrado com Sucesso!');</script>";
+                        print "<script>location.href='?pagina=login';</script>";
+                    }
+                    else{
+                        print "<script>alert('Não foi possivel realizar o cadastro!');</script>";
+                        print "<script>location.href='?pagina=cadastro-usuario';</script>";
+                    }
+
+                }
+                
             }
+            
             
         break;
         case "verificar":
