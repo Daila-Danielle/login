@@ -8,12 +8,12 @@ if((!isset ($_SESSION['email']) == true) and (!isset ($_SESSION['senha']) == tru
 
 $logado = $_SESSION['email'];
 
-$foto = consulta_foto($logado)
+$foto = consulta_foto($logado);
 
 ?>
 
 <div>
-<h1>PARABENS <?php echo $logado ?> EFETUOU O LOGIN</h1>
+<h4>PARABENS <?php echo $logado ?> EFETUOU O LOGIN</h4>
 
-<img src="<?php echo $foto['foto_perfil'] ?>">
+<center><img class="img" src="<?php echo $foto['foto_perfil'] ?>"></center>
 </div>
